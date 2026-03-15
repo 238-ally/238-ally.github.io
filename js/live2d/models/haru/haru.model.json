@@ -1,0 +1,1 @@
+{"name":"Haru","model":"haru.1024/haru.1024.model3.json","textures":["haru.1024/haru.1024.png"],"motions":{},"expressions":{},"physics":"haru.physics.json","pose":null,"hit_areas":[{"name":"head","id":"head"},{"name":"body","id":"body"}]}

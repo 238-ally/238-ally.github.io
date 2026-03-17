@@ -3,7 +3,7 @@
   var colors = ["#ffffff","#ffeb3b","#03a9f4","#e91e63","#8bc34a"];
   
   function createStar(e){
-    var s = document.createElement("div");
+    var s = document.createElement("div"); // 改成 div 更稳定
     s.className = "star";
     s.style.position = "fixed";
     s.style.width = "4px";
@@ -13,7 +13,7 @@
     s.style.left = e.clientX + "px";
     s.style.top = e.clientY + "px";
     s.style.pointerEvents = "none";
-    s.style.zIndex = "9999";
+    s.style.zIndex = "-1"; // 👈 放到背景
     document.body.appendChild(s);
     
     stars.push({el: s, x: e.clientX, y: e.clientY, alpha:1, scale:1});

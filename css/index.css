@@ -185,7 +185,7 @@ template {
 #aside-content .card-categories ul.card-category-list > .card-category-list-item a span,
 .site-data > a .headline,
 #nav #blog-info,
-#sidebar #sidebar-menus .menus_items .site-page {
+.main-content #sidebar-menus .menus_items .site-page {
   overflow: hidden;
   -o-text-overflow: ellipsis;
   text-overflow: ellipsis;
@@ -5408,7 +5408,10 @@ figure.highlight pre .javascript .function {
   height: 100%;
   background: rgba(0,0,0,0.8);
 }
-#sidebar #sidebar-menus {
+.main-content {
+  margin-top: 20px;
+}
+.main-content #sidebar-menus {
   position: fixed;
   top: 0;
   right: -330px;
@@ -5425,23 +5428,23 @@ figure.highlight pre .javascript .function {
   -ms-transition: all 0.5s;
   transition: all 0.5s;
 }
-#sidebar #sidebar-menus.open {
+.main-content #sidebar-menus.open {
   -webkit-transform: translate3d(-100%, 0, 0);
   -moz-transform: translate3d(-100%, 0, 0);
   -o-transform: translate3d(-100%, 0, 0);
   -ms-transform: translate3d(-100%, 0, 0);
   transform: translate3d(-100%, 0, 0);
 }
-#sidebar #sidebar-menus > .avatar-img {
+.main-content #sidebar-menus > .avatar-img {
   margin: 20px auto;
 }
-#sidebar #sidebar-menus .site-data {
+.main-content #sidebar-menus .site-data {
   padding: 0 10px;
 }
-#sidebar #sidebar-menus hr {
+.main-content #sidebar-menus hr {
   margin: 20px auto;
 }
-#sidebar #sidebar-menus .menus_items {
+.main-content #sidebar-menus .menus_items {
   margin: 20px;
   padding: 15px;
   background: var(--sidebar-menu-bg);
@@ -5449,7 +5452,7 @@ figure.highlight pre .javascript .function {
   box-shadow: 0 0 1px 1px rgba(7,17,27,0.05);
   border-radius: 10px;
 }
-#sidebar #sidebar-menus .menus_items .site-page {
+.main-content #sidebar-menus .menus_items .site-page {
   position: relative;
   display: block;
   margin: 4px 0;
@@ -5459,7 +5462,7 @@ figure.highlight pre .javascript .function {
   cursor: pointer;
   border-radius: 6px;
 }
-#sidebar #sidebar-menus .menus_items .site-page:hover {
+.main-content #sidebar-menus .menus_items .site-page:hover {
   background: var(--text-bg-hover);
   -webkit-box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
@@ -5475,11 +5478,11 @@ figure.highlight pre .javascript .function {
   -ms-transform: translateX(3px);
   transform: translateX(3px);
 }
-#sidebar #sidebar-menus .menus_items .site-page i:first-child {
+.main-content #sidebar-menus .menus_items .site-page i:first-child {
   width: 15%;
   text-align: left;
 }
-#sidebar #sidebar-menus .menus_items .site-page.group > i:last-child {
+.main-content #sidebar-menus .menus_items .site-page.group > i:last-child {
   position: absolute;
   top: 0.6em;
   right: 10px;
@@ -5489,14 +5492,14 @@ figure.highlight pre .javascript .function {
   -ms-transition: -ms-transform 0.3s;
   transition: transform 0.3s;
 }
-#sidebar #sidebar-menus .menus_items .site-page.group.hide > i:last-child {
+.main-content #sidebar-menus .menus_items .site-page.group.hide > i:last-child {
   -webkit-transform: rotate(90deg);
   -moz-transform: rotate(90deg);
   -o-transform: rotate(90deg);
   -ms-transform: rotate(90deg);
   transform: rotate(90deg);
 }
-#sidebar #sidebar-menus .menus_items .site-page.group.hide + .menus_item_child {
+.main-content #sidebar-menus .menus_items .site-page.group.hide + .menus_item_child {
   overflow: hidden;
   max-height: 0;
   opacity: 0;
@@ -5513,7 +5516,7 @@ figure.highlight pre .javascript .function {
   -ms-transform-origin: top;
   transform-origin: top;
 }
-#sidebar #sidebar-menus .menus_items .menus_item_child {
+.main-content #sidebar-menus .menus_items .menus_item_child {
   margin: 0;
   padding-left: 25px;
   max-height: 0;
@@ -5538,7 +5541,7 @@ figure.highlight pre .javascript .function {
   transform-origin: top;
   will-change: transform, opacity, max-height;
 }
-#sidebar #sidebar-menus .site-page.group:not(.hide) + .menus_item_child {
+.main-content #sidebar-menus .site-page.group:not(.hide) + .menus_item_child {
   max-height: 1000px;
   opacity: 1;
   -ms-filter: none;
@@ -5548,6 +5551,22 @@ figure.highlight pre .javascript .function {
   -o-transform: scaleY(1);
   -ms-transform: scaleY(1);
   transform: scaleY(1);
+}
+#aside-content {
+  float: none !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  position: relative !important;
+  right: auto !important;
+  margin-top: 20px;
+  max-width: 900px;
+  margin: 20px auto;
+}
+.layout {
+  display: block !important;
+}
+#content-inner {
+  display: block !important;
 }
 #vcomment {
   font-size: 1.1em;
